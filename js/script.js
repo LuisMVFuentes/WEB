@@ -1,19 +1,24 @@
 var diasdelasemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'];
 var horasdelasemana = ['07:30', '08:20', '09:10', '10:00', '10:50', '11:40', '12:30', '13:20',
-    '14:10', '15:00', '15:50', '16:40', '17:30', '18:20', '19:10', '20:00', '20:50'];
-var cursosGuias = [
-    {
+    '14:10', '15:00', '15:50', '16:40', '17:30', '18:20', '19:10', '20:00', '20:50'
+];
+var cursosGuias = [{
         Nombre: 'ORGANIZACION Y METODOS',
         Ciclo: 5,
         Codigo: 'AD326',
         Creditos: 3,
         Color: 'green',
-        Hora: [{dia: 'Jueves',
+        Hora: [{
+                dia: 'Jueves',
                 horas: ['12:30', '13:20'],
-                aula: 'Mlt.01'},
-            {dia: 'Martes',
+                aula: 'Mlt.01'
+            },
+            {
+                dia: 'Martes',
                 horas: ['12:30', '13:20'],
-                aula: 'Aul.32'}]
+                aula: 'Aul.32'
+            }
+        ]
     },
     {
         Nombre: 'FISICA III',
@@ -21,12 +26,17 @@ var cursosGuias = [
         Codigo: 'FF311',
         Creditos: 3,
         Color: 'lime',
-        Hora: [{dia: 'Miercoles',
+        Hora: [{
+                dia: 'Miercoles',
                 horas: ['14:10', '15:00'],
-                aula: 'L.I.03'},
-            {dia: 'Viernes',
+                aula: 'L.I.03'
+            },
+            {
+                dia: 'Viernes',
                 horas: ['14:10', '15:00'],
-                aula: 'L.I.03'}]
+                aula: 'L.I.03'
+            }
+        ]
     },
     {
         Nombre: 'SISTEMAS ELECTRICOS Y ELECTRONICOS 48B',
@@ -34,12 +44,17 @@ var cursosGuias = [
         Codigo: 'IS332',
         Creditos: 4,
         Color: 'orange',
-        Hora: [{dia: 'Lunes',
+        Hora: [{
+                dia: 'Lunes',
                 horas: ['07:30', '08:20', '09:10'],
-                aula: 'L.I.06'},
-            {dia: 'Lunes',
+                aula: 'L.I.06'
+            },
+            {
+                dia: 'Lunes',
                 horas: ['10:00', '10:50'],
-                aula: 'L.I.06'}]
+                aula: 'L.I.06'
+            }
+        ]
     },
     {
         Nombre: 'TALLER DE PROGRAMACION 48B',
@@ -47,9 +62,11 @@ var cursosGuias = [
         Codigo: 'IS334',
         Creditos: 3,
         Color: 'deep-orange',
-        Hora: [{dia: 'Miercoles',
-                horas: ['07:30', '08:20', '09:10', '10:00', '10:50', '11:40'],
-                aula: 'L.I.02'}]
+        Hora: [{
+            dia: 'Miercoles',
+            horas: ['07:30', '08:20', '09:10', '10:00', '10:50', '11:40'],
+            aula: 'L.I.02'
+        }]
     },
     {
         Nombre: 'SISTEMICA 48B',
@@ -57,12 +74,17 @@ var cursosGuias = [
         Codigo: 'IS354',
         Creditos: 4,
         Color: 'red lighten-3',
-        Hora: [{dia: 'Lunes',
+        Hora: [{
+                dia: 'Lunes',
                 horas: ['16:40', '17:30', '18:20'],
-                aula: 'Mlt.01'},
-            {dia: 'Martes',
+                aula: 'Mlt.01'
+            },
+            {
+                dia: 'Martes',
                 horas: ['16:40', '17:30'],
-                aula: 'L.I.02'}]
+                aula: 'L.I.02'
+            }
+        ]
     },
     {
         Nombre: 'SISTEMAS PRODUCTIVOS 48B',
@@ -70,12 +92,17 @@ var cursosGuias = [
         Ciclo: 6,
         Creditos: 4,
         Color: 'purple lighten-3',
-        Hora: [{dia: 'Viernes',
+        Hora: [{
+                dia: 'Viernes',
                 horas: ['09:10', '10:00', '10:50'],
-                aula: 'Mlt.01'},
-            {dia: 'Jueves',
+                aula: 'Mlt.01'
+            },
+            {
+                dia: 'Jueves',
                 horas: ['10:00', '10:50'],
-                aula: 'L.I.05'}]
+                aula: 'L.I.05'
+            }
+        ]
     },
     {
         Nombre: 'DISEÑO DE EXPERIMENTOS 48B',
@@ -83,12 +110,17 @@ var cursosGuias = [
         Ciclo: 7,
         Creditos: 4,
         Color: 'teal lighten-3',
-        Hora: [{dia: 'Jueves',
+        Hora: [{
+                dia: 'Jueves',
                 horas: ['14:10', '15:00'],
-                aula: 'Mlt.02'},
-            {dia: 'Viernes',
+                aula: 'Mlt.02'
+            },
+            {
+                dia: 'Viernes',
                 horas: ['07:30', '08:20'],
-                aula: 'L.I.04'}]
+                aula: 'L.I.04'
+            }
+        ]
     }
 ];
 
@@ -105,14 +137,11 @@ function cargar() {
             html1 += (i === 0 && j !== 0) ? '<th class="grey lighten-1 center-align">' + diasdelasemana[j - 1] + '</th>' : '';
             html1 += (j === 0 && i !== 0) ? '<th class="grey lighten-1 center-align">' + horasdelasemana[i - 1] + '</th>' : '';
             html1 += (j !== 0 && i !== 0) ? '<td style="padding: 0px" class="grey lighten-3 center-align" id="cel-' + (i - 1) + '' + (j - 1) + '"></td>' : '';
-        }
-        ;
+        };
         html1 += '</tr>';
-    }
-    ;
+    };
     document.getElementById('horario').innerHTML = html1;
-}
-;
+};
 
 function rellenar() {
 
@@ -149,23 +178,15 @@ function rellenar() {
 
 
                                 //document.getElementById(pintar2).innerHTML = cursosGuias[i].Codigo;
-                            }
-                            ;
-                        }
-                        ;
-                    }
-                    ;
-                }
-                ;
-            }
-            ;
-        }
-        ;
-    }
-    ;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    };
     listar();
-}
-;
+};
 
 function listar() {
     var lista = document.getElementById('listaCursos');
@@ -205,19 +226,17 @@ function listar() {
         body.setAttribute('class', 'collapsible-body white');
 
         var span = document.createElement('span');
-        var texto1 = '<b>Codigo: </b>' + cursosGuias[i].Codigo + '<br>'
-                + '<b>Cred: </b>' + cursosGuias[i].Creditos + ' cred<br>'
-                + '<b>Horas: </b><br>';
+        var texto1 = '<b>Codigo: </b>' + cursosGuias[i].Codigo + '<br>' +
+            '<b>Cred: </b>' + cursosGuias[i].Creditos + ' cred<br>' +
+            '<b>Horas: </b><br>';
         for (var ii = 0; ii < cursosGuias[i].Hora.length; ii++) {
             texto1 += '-(<i><b>' + cursosGuias[i].Hora[ii].dia + '</b> [' + cursosGuias[i].Hora[ii].aula + ']' + '</i>) ';
             for (var iii = 0; iii < cursosGuias[i].Hora[ii].horas.length; iii++) {
                 texto1 += cursosGuias[i].Hora[ii].horas[iii] + " ";
                 texto1 += (iii !== cursosGuias[i].Hora[ii].horas.length - 1) ? ', ' : '';
-            }
-            ;
+            };
             texto1 += (ii !== cursosGuias[i].Hora.length - 1) ? '<br>' : '';
-        }
-        ;
+        };
 
         texto1 += '<br><b>Color: </b> <div class="' + cursosGuias[i].Color + ' white-text">' + cursosGuias[i].Color + '</div>';
         span.innerHTML = texto1;
@@ -226,8 +245,7 @@ function listar() {
 
         lista.appendChild(curso);
 
-    }
-    ;
+    };
 
     var SumaDeCreditos = document.getElementById('totalCred');
     var headercred = document.createElement('div');
@@ -246,24 +264,9 @@ function listar() {
     bodycred.setAttribute('class', 'collapsible-body white');
     SumaDeCreditos.appendChild(headercred);
     SumaDeCreditos.appendChild(bodycred);
-}
-;
+};
 
-function flotante() {
-
-    var botonflot = document.getElementById('botonFlotante');
-    botonflot.setAttribute('class', 'fixed-action-btn');
-    botonflot.innerHTML =
-            '<a class="btn-floating btn-large red">\n\
-                <i class="large material-icons">more</i>\n\
-            </a>\n\
-            <ul>\n\
-                <li><a class="btn-floating blue"><i class="material-icons">add</i></a></li>\n\
-            </ul>';
-
-}
-
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     console.log('JS creado en java');
     console.log('Nombre: script.js');
     console.log('Ubicacion: C:\Users\MARIANO\Desktop\HTML - CREADO\ProyectoHorarioResponsivo\js');
@@ -273,17 +276,13 @@ window.addEventListener('load', function () {
     if (document.getElementById('horario') !== null) {
         cargar();
         rellenar();
-    }
-    ;
+    };
 
     if (document.getElementById('listaCursos') !== null) {
         listar();
-    }
-    ;
-    
-    flotante();
+    };
 
-    $(document).ready(function () {
+    $(document).ready(function() {
         $('.materialboxed').materialbox();
         $('.collapsible').collapsible();
         $('.modal').modal();
